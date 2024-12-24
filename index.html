@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfolyo</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2><a href="#">Furkan Sezgin</a></h2>
+            </div>
+            <ul class="nav_links">
+                <li><a href="index.html" class="active">Anasayfa</a></li>
+                <li><a href="index2.html">Hakkımda</a></li>
+                <li><a href="index3.html">Projelerim</a></li>
+                <li><a href="index4.html">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+ <!-- Ana Sayfa -->
+ <section id="anasayfa">
+    <div class="inner_anasayfa">
+        <div class="child_anasayfa">
+            <h1>HOŞ GELDİN<br><span class="span_child">bu benim tasarladığım ilk site</span></h1>
+            <p>sence nasıl olmuş</p>
+            <div class="btn-group">
+                <button id="message-btn" class="btn">Mesaj At</button>
+                <button id="play-music-btn" class="btn">Müzik Oynat</button>
+                <button id="stop-music-btn" class="btn">Müzik Durdur</button> 
+                <!-- Müzik Durdur Butonu -->
+                <a href="https://www.instagram.com/furkansezgn72" target="_blank">
+                    <button class="social-btn">Instagram</button>
+                </a>
+                <a href="https://github.com/FurkanSezgin0" target="_blank">
+                    <button class="social-btn">GitHub</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <audio id="background-music" src="müzik/song.mp3"></audio>
+</section>
+
+<script>
+    // Müzik başlatma butonu
+    document.getElementById('play-music-btn').addEventListener('click', function() {
+        var audio = document.getElementById('background-music');
+        audio.play();
+    });
+
+    // Müzik durdurma butonu
+    document.getElementById('stop-music-btn').addEventListener('click', function() {
+        var audio = document.getElementById('background-music');
+        audio.pause();  
+        audio.currentTime = 0; 
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfolyo</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2><a href="#">Furkan Sezgin</a></h2>
+            </div>
+            <ul class="nav_links">
+                <li><a href="index.html" class="active">Anasayfa</a></li>
+                <li><a href="index2.html">Hakkımda</a></li>
+                <li><a href="index3.html">Projelerim</a></li>
+                <li><a href="index4.html">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- İletişim -->
+    <section id="iletişim">
+        <div class="section_title">
+            <h2>İletişime Geç</h2>  
+        </div>
+        <div class="inner_contact">
+            <div class="child_contact">
+                <form id="contact-form" action="send_email.php" method="POST" onsubmit="return validateForm(event)">
+                    <label for="fullname">İsim</label>
+                    <input id="fullname" placeholder="İsim" type="text" name="fullname" required>
+                    <label for="email">E-mail</label>
+                    <input id="email" placeholder="E-mail" type="email" name="email" required>
+                    <label for="phone">Telefon</label>
+                    <input id="phone" placeholder="Telefon" type="text" name="phone" required>
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" placeholder="Mesaj" name="message" cols="30" rows="10" required></textarea>
+                    <input id="send-btn" type="submit" value="Gönder">
+                </form>
+                <div id="notification" class="hidden">Mesaj gönderildi!</div>
+            </div>
+
+            <!-- İletişim Logosu -->
+            <div class="skill-logo-container">
+                <img src="img/iletişim.jpg" alt="İletişim Logo" class="skill-logo">
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
